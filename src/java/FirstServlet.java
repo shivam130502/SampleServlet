@@ -11,8 +11,10 @@ public class FirstServlet extends HttpServlet{
     
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
         
-        RequestDispatcher rd = request.getRequestDispatcher("SecondServlet");
-        rd.forward(request, response); // might throw servlet exception
+//        RequestDispatcher rd = request.getRequestDispatcher("SecondServlet");
+//        rd.forward(request, response); // might throw servlet exception
+        
+        response.sendRedirect("SecondServlet");
     }
     
 }
