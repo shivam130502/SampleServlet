@@ -2,6 +2,7 @@
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -9,8 +10,12 @@ import java.io.PrintWriter;
 public class SecondServlet extends HttpServlet {
     
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException{
+        
+        HttpSession session = request.getSession();
+        String number = session.getAttribute("num1").toString(); //session.getAttribute() returns an Object
+        
         PrintWriter out = response.getWriter();
-        out.print("Second Servlet");
+        out.print("You Entered " + number);
     }
     
 }
