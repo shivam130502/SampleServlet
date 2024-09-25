@@ -80,7 +80,7 @@ public class NewServlet extends HttpServlet {
      */
     @Override
     public String getServletInfo() {
-        return "Short description";
+        return "Adds 2 numbers";
     }// </editor-fold>
 
 }
