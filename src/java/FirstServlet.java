@@ -19,10 +19,10 @@ public class FirstServlet extends HttpServlet{
 //        HttpSession session = request.getSession();
 //        session.setAttribute("num1", number);
 
-        Cookie cookie = new Cookie("num1", number);
-        response.addCookie(cookie);
+//        Cookie cookie = new Cookie("num1", number);
+//        response.addCookie(cookie); // cookies are similar to sessions and hold information passed by user
         
-        response.sendRedirect("SecondServlet");
+        response.sendRedirect("SecondServlet?num1=" + number);
     }
     
 }

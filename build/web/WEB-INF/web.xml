@@ -16,4 +16,24 @@
         <servlet-name>SecondServlet</servlet-name>
         <url-pattern>/SecondServlet</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>TestServlet</servlet-name>
+        <servlet-class>TestServlet</servlet-class>
+        <init-param>
+            <param-name>Number</param-name>
+            <param-value>100</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestServlet</servlet-name>
+        <url-pattern>/TestServlet</url-pattern>
+    </servlet-mapping>
+    <context-param>
+        <param-name>Number</param-name>
+        <param-value>69</param-value>
+    </context-param>
+    <context-param>
+        <param-name>Name</param-name>
+        <param-value>Shivam</param-value>
+    </context-param>
 </web-app>

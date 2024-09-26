@@ -15,14 +15,14 @@ public class SecondServlet extends HttpServlet {
 //        HttpSession session = request.getSession();
 //        String number = session.getAttribute("num1").toString(); //session.getAttribute() returns an Object
         
-        String number = null;
+        String number = request.getParameter("num1");
         
-        Cookie[] cookies = request.getCookies();
-        
-        for(Cookie cookie : cookies){
-            if(cookie.getName() .equals("num1"))
-                    number = cookie.getValue();
-        }
+//        Cookie[] cookies = request.getCookies();
+//        
+//        for(Cookie cookie : cookies){
+//            if(cookie.getName() .equals("num1"))
+//                    number = cookie.getValue();
+//        }
         
         PrintWriter out = response.getWriter();
         out.print("You Entered " + number);
